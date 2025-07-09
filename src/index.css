@@ -8,34 +8,67 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
+    --foreground: 220 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 220 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 220 15% 20%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 193 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 250 65% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 220 15% 97%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 0 0% 95%;
-    --accent-foreground: 0 0% 15%;
+    --accent: 193 100% 95%;
+    --accent-foreground: 220 15% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 50%;
+    --border: 220 15% 90%;
+    --input: 220 15% 95%;
+    --ring: 193 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Solvmind brand colors */
+    --solvmind-cyan: 193 100% 50%;
+    --solvmind-purple: 250 65% 60%;
+    --solvmind-gradient: linear-gradient(135deg, hsl(193 100% 50%), hsl(250 65% 60%));
+    --solvmind-gradient-light: linear-gradient(135deg, hsl(193 100% 95%), hsl(250 65% 95%));
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 193 100% 50%;
+    --primary-foreground: 220 15% 8%;
+
+    --secondary: 250 65% 60%;
+    --secondary-foreground: 220 15% 8%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 220 15% 15%;
+    --accent-foreground: 220 15% 95%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 193 100% 50%;
   }
 }
 

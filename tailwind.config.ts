@@ -63,12 +63,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				wrlds: {
-					teal: '#9F9EA1',
-					dark: '#3F3F3F',
-					light: '#F6F6F7',
-					accent: '#C8C8C9',
-					muted: '#F1F1F1'
+				solvmind: {
+					cyan: 'hsl(var(--solvmind-cyan))',
+					purple: 'hsl(var(--solvmind-purple))',
+					gradient: 'var(--solvmind-gradient)',
+					'gradient-light': 'var(--solvmind-gradient-light)'
 				}
 			},
 			borderRadius: {
