@@ -49,10 +49,10 @@ const SolvmindServices = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30">
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30 hover:ai-glow hover:scale-105">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className={`p-3 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 ${service.color}`}>
+                    <div className={`p-3 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 ${service.color} group-hover:scale-110 transition-transform neural-pulse`}>
                       <Icon className="h-8 w-8" />
                     </div>
                     <div>

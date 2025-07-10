@@ -44,9 +44,9 @@ const SolvmindHome = () => {
             {industries.map((industry, index) => {
               const Icon = industry.icon;
               return (
-                <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300">
+                <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300 hover:scale-105 hover:ai-glow">
                   <CardContent className="p-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mb-6 group-hover:scale-110 transition-transform">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mb-6 group-hover:scale-110 transition-transform neural-pulse">
                       <Icon className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold text-foreground mb-3">{industry.name}</h3>
@@ -60,24 +60,27 @@ const SolvmindHome = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-primary to-secondary relative overflow-hidden">
+        {/* AI Particles overlay */}
+        <div className="ai-particles"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 neural-pulse">
             Ready to Transform Your Business with AI?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-8 animate-fade-in">
             Join leading businesses that are already benefiting from our AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact" 
-              className="bg-white text-primary px-8 py-3 rounded-md font-medium hover:bg-white/90 transition-colors"
+              className="bg-white text-primary px-8 py-3 rounded-md font-medium hover:bg-white/90 transition-all hover:scale-105 ai-glow"
             >
               Get Free Consultation
             </a>
             <a 
               href="mailto:sales@solvmind.com" 
-              className="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-primary transition-colors"
+              className="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-primary transition-all hover:scale-105"
             >
               Contact Sales
             </a>

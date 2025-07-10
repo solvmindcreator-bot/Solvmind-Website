@@ -113,7 +113,7 @@ const SolvmindServicesPage = () => {
               return (
                 <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? 'lg:flex-row-reverse' : ''}`}>
                   <div className={isEven ? 'lg:order-1' : 'lg:order-2'}>
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} mb-6`}>
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} mb-6 neural-pulse`}>
                       <Icon className="h-8 w-8 text-white" />
                     </div>
                     <h2 className="text-3xl font-bold text-foreground mb-4">{service.title}</h2>
@@ -131,7 +131,7 @@ const SolvmindServicesPage = () => {
                       </div>
                     </div>
 
-                    <Button asChild className={`bg-gradient-to-r ${service.color} text-white hover:opacity-90`}>
+                    <Button asChild className={`gradient-shift text-white hover:opacity-90 hover:scale-105 transition-all ai-glow`}>
                       <Link to="/contact">
                         Get Started
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -140,7 +140,7 @@ const SolvmindServicesPage = () => {
                   </div>
 
                   <div className={isEven ? 'lg:order-2' : 'lg:order-1'}>
-                    <Card className="h-full">
+                    <Card className="h-full hover:ai-glow transition-all duration-300">
                       <CardHeader>
                         <CardTitle className="text-xl">Features & Capabilities</CardTitle>
                       </CardHeader>
@@ -164,22 +164,25 @@ const SolvmindServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+      <section className="py-20 bg-muted/30 relative overflow-hidden">
+        {/* AI Particles */}
+        <div className="ai-particles"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 neural-pulse">
             Ready to Implement AI in Your Business?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
             Schedule a free consultation to discuss your specific needs and discover how AI can transform your operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-gradient-to-r from-primary to-secondary">
+            <Button size="lg" asChild className="gradient-shift text-white hover:scale-105 transition-all ai-glow">
               <Link to="/contact">
                 Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" asChild className="hover:scale-105 transition-transform border-primary/50 hover:border-primary">
               <a href="mailto:sales@solvmind.com">Email Us Directly</a>
             </Button>
           </div>
