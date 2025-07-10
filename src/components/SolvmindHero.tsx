@@ -26,13 +26,13 @@ const SolvmindHero = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               <span className="block">AI-Powered Solutions</span>
               <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                for the Pacific
+                for Modern Business
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Empowering businesses across Papua New Guinea and the Pacific with cutting-edge AI chatbots, 
-              intelligent automation, and custom AI tools that transform how you work.
+              Transform your business operations with cutting-edge AI chatbots, 
+              intelligent automation, and custom AI tools that revolutionize how you work.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -59,7 +59,7 @@ const SolvmindHero = () => {
               </div>
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Pacific-Focused</div>
+                <div className="text-sm text-muted-foreground">AI-Focused</div>
               </div>
             </div>
           </div>

@@ -36,7 +36,7 @@ const SolvmindHome = () => {
               Industries We Serve
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Specialized AI solutions for key sectors across Papua New Guinea and the Pacific region.
+              Specialized AI solutions for key industries and modern business sectors.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ const SolvmindHome = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join leading Pacific businesses that are already benefiting from our AI solutions.
+            Join leading businesses that are already benefiting from our AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

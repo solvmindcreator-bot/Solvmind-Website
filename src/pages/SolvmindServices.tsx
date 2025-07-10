@@ -1,5 +1,5 @@
 import SolvmindLayout from '@/components/SolvmindLayout';
-import { Bot, Workflow, Brain, Settings, CheckCircle, ArrowRight } from 'lucide-react';
+import { MessageCircle, Zap, BrainCircuit, Puzzle, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ const services = [
   {
     title: 'AI Chatbots',
     description: 'Advanced conversational AI that understands context, learns from interactions, and provides human-like customer support.',
-    icon: Bot,
+    icon: MessageCircle,
     features: [
       'Natural Language Processing in English and Tok Pisin',
       'Multi-platform deployment (Web, WhatsApp, Facebook)',
@@ -28,7 +28,7 @@ const services = [
   {
     title: 'Workflow Automation',
     description: 'Intelligent automation that streamlines your business processes, reduces manual work, and eliminates human error.',
-    icon: Workflow,
+    icon: Zap,
     features: [
       'Document processing and data extraction',
       'Automated report generation',
@@ -48,7 +48,7 @@ const services = [
   {
     title: 'AI Assistants',
     description: 'Personalized AI assistants that help your team make better decisions with data-driven insights and recommendations.',
-    icon: Brain,
+    icon: BrainCircuit,
     features: [
       'Document analysis and summarization',
       'Predictive analytics and forecasting',
@@ -68,7 +68,7 @@ const services = [
   {
     title: 'AI Integration Services',
     description: 'Seamless integration of AI capabilities into your existing systems without disrupting current operations.',
-    icon: Settings,
+    icon: Puzzle,
     features: [
       'Custom API development and integration',
       'Legacy system AI enhancement',
@@ -97,7 +97,7 @@ const SolvmindServicesPage = () => {
             AI Solutions That <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Transform</span> Business
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Comprehensive AI services designed specifically for businesses in Papua New Guinea and the Pacific region.
+            Comprehensive AI services designed to transform modern businesses with intelligent solutions.
           </p>
         </div>
       </section>

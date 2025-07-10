@@ -17,8 +17,8 @@ const SolvmindFooter = () => {
               <span className="text-xl font-bold">Solvmind AI</span>
             </div>
             <p className="text-background/80 mb-4 max-w-md">
-              Leading AI solutions provider in Papua New Guinea, specializing in chatbots, automation, 
-              and custom AI tools for businesses across the Pacific.
+              Leading AI solutions provider specializing in chatbots, automation, 
+              and custom AI tools for modern businesses.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-background/80">
@@ -69,7 +69,7 @@ const SolvmindFooter = () => {
 
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-background/60 text-sm">
-            © {new Date().getFullYear()} Solvmind AI. All rights reserved. Empowering the Pacific with AI.
+            © {new Date().getFullYear()} Solvmind AI. All rights reserved. Empowering business with AI.
           </p>
         </div>
       </div>

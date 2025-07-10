@@ -39,7 +39,7 @@ const SolvmindAbout = () => {
             About <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Solvmind AI</span>
           </h1>
           <p className="text-xl text-muted-foreground">
-            Pioneering AI solutions for the Pacific region, empowering businesses with intelligent technology that understands local needs.
+            Pioneering AI solutions that transform businesses with intelligent technology tailored to unique operational needs.
           </p>
         </div>
       </section>
@@ -59,7 +59,7 @@ const SolvmindAbout = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  To democratize access to advanced AI technology across Papua New Guinea and the Pacific region, 
+                  To democratize access to advanced AI technology, 
                   helping businesses of all sizes harness the power of artificial intelligence to improve efficiency, 
                   enhance customer experiences, and drive sustainable growth.
                 </p>
@@ -109,8 +109,8 @@ const SolvmindAbout = () => {
             
             <p className="text-lg leading-relaxed">
               Today, we're proud to be helping banks, telecommunications companies, government agencies, and businesses 
-              across the Pacific harness the power of AI to improve their operations, better serve their customers, 
-              and drive growth in their communities.
+              harness the power of AI to improve their operations, better serve their customers, 
+              and drive growth in their markets.
             </p>
           </div>
         </div>

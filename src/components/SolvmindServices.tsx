@@ -1,32 +1,32 @@
-import { Bot, Workflow, Brain, Settings } from 'lucide-react';
+import { MessageCircle, Zap, BrainCircuit, Puzzle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const services = [
   {
     title: 'AI Chatbots',
     description: 'Intelligent conversational AI that handles customer queries, provides support, and enhances user engagement 24/7.',
-    icon: Bot,
+    icon: MessageCircle,
     features: ['Natural language processing', 'Multi-language support', 'Integration with existing systems', 'Custom personality and tone'],
     color: 'text-primary'
   },
   {
     title: 'Workflow Automation',
     description: 'Streamline your business processes with AI-powered automation that reduces manual work and increases efficiency.',
-    icon: Workflow,
+    icon: Zap,
     features: ['Process optimization', 'Data entry automation', 'Report generation', 'Task scheduling'],
     color: 'text-secondary'
   },
   {
     title: 'AI Assistants',
     description: 'Custom AI assistants tailored to your business needs, helping employees work smarter and faster.',
-    icon: Brain,
+    icon: BrainCircuit,
     features: ['Document analysis', 'Decision support', 'Knowledge management', 'Predictive insights'],
     color: 'text-primary'
   },
   {
     title: 'AI Integration',
     description: 'Seamlessly integrate AI capabilities into your existing systems and workflows without disruption.',
-    icon: Settings,
+    icon: Puzzle,
     features: ['API development', 'System integration', 'Data migration', 'Staff training'],
     color: 'text-secondary'
   }
@@ -41,7 +41,7 @@ const SolvmindServices = () => {
             Our AI Solutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive AI services designed specifically for businesses in Papua New Guinea and the Pacific region.
+            Comprehensive AI services designed to transform modern businesses with intelligent automation solutions.
           </p>
         </div>
 
