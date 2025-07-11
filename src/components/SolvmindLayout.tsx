@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import SolvmindNavbar from '@/components/SolvmindNavbar';
 import SolvmindFooter from '@/components/SolvmindFooter';
+import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 type SolvmindLayoutProps = {
   children: React.ReactNode;
@@ -9,6 +10,7 @@ type SolvmindLayoutProps = {
 
 const SolvmindLayout = ({ children }: SolvmindLayoutProps) => {
   const location = useLocation();
+  useScrollAnimation();
 
   useEffect(() => {
     window.scrollTo(0, 0);

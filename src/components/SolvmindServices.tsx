@@ -49,31 +49,50 @@ const SolvmindServices = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30 hover:ai-glow hover:scale-105">
+              <Card 
+                key={index} 
+                className="group hover:shadow-lg transition-all duration-500 border-border/50 hover:border-primary/30 hover:ai-glow hover:scale-105 hover-lift scroll-animate"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className={`p-3 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 ${service.color} group-hover:scale-110 transition-transform neural-pulse`}>
-                      <Icon className="h-8 w-8" />
+                    <div className={`p-3 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 ${service.color} group-hover:scale-110 transition-transform neural-pulse overflow-hidden relative`}>
+                      <Icon className="h-8 w-8 relative z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div>
-                      <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
+                      <CardTitle className="text-xl font-semibold group-hover:text-primary transition-colors">
+                        {service.title}
+                      </CardTitle>
                     </div>
                   </div>
-                  <CardDescription className="text-base leading-relaxed">
+                  <CardDescription className="text-base leading-relaxed group-hover:text-foreground/80 transition-colors">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    <h4 className="font-medium text-foreground mb-3">Key Features:</h4>
+                    <h4 className="font-medium text-foreground mb-3 group-hover:text-primary transition-colors">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-2 text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        <li 
+                          key={featureIndex} 
+                          className="flex items-center space-x-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-all duration-300"
+                          style={{ animationDelay: `${(index * 150) + (featureIndex * 50)}ms` }}
+                        >
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full group-hover:scale-125 transition-transform"></div>
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
+                  </div>
+                  
+                  {/* Hidden content revealed on hover */}
+                  <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    <div className="h-px bg-gradient-to-r from-primary/50 to-secondary/50 mb-3"></div>
+                    <p className="text-xs text-muted-foreground">
+                      Contact us to learn how this solution can be customized for your business needs.
+                    </p>
                   </div>
                 </CardContent>
               </Card>

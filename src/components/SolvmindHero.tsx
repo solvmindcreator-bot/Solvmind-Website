@@ -50,19 +50,19 @@ const SolvmindHero = () => {
               </Button>
             </div>
 
-            {/* Stats with AI animations */}
+            {/* Key Benefits with AI animations */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
-              <div className="text-center group">
-                <div className="text-2xl sm:text-3xl font-bold text-primary mb-2 neural-pulse">50+</div>
-                <div className="text-sm text-muted-foreground">AI Solutions Deployed</div>
-              </div>
               <div className="text-center group">
                 <div className="text-2xl sm:text-3xl font-bold text-secondary mb-2 ai-glow">24/7</div>
                 <div className="text-sm text-muted-foreground">AI Support Available</div>
               </div>
               <div className="text-center group">
                 <div className="text-2xl sm:text-3xl font-bold text-primary mb-2 animate-pulse-slow">100%</div>
-                <div className="text-sm text-muted-foreground">AI-Focused</div>
+                <div className="text-sm text-muted-foreground">AI-Focused Solutions</div>
+              </div>
+              <div className="text-center group">
+                <div className="text-2xl sm:text-3xl font-bold text-primary mb-2 neural-pulse">Fast</div>
+                <div className="text-sm text-muted-foreground">Implementation</div>
               </div>
             </div>
           </div>

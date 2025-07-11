@@ -1,6 +1,8 @@
 import SolvmindLayout from '@/components/SolvmindLayout';
 import SolvmindHero from '@/components/SolvmindHero';
 import SolvmindServices from '@/components/SolvmindServices';
+import ConsultationBooking from '@/components/ConsultationBooking';
+import Process from '@/components/Process';
 import { Card, CardContent } from '@/components/ui/card';
 import { Building, Phone, Users } from 'lucide-react';
 
@@ -27,6 +29,8 @@ const SolvmindHome = () => {
     <SolvmindLayout>
       <SolvmindHero />
       <SolvmindServices />
+      <Process />
+      <ConsultationBooking />
       
       {/* Industries Section */}
       <section className="py-20 bg-background">
@@ -44,13 +48,22 @@ const SolvmindHome = () => {
             {industries.map((industry, index) => {
               const Icon = industry.icon;
               return (
-                <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300 hover:scale-105 hover:ai-glow">
+                <Card 
+                  key={index} 
+                  className="text-center group hover:shadow-lg transition-all duration-500 hover:scale-105 hover:ai-glow hover-lift scroll-animate"
+                  style={{ animationDelay: `${index * 200}ms` }}
+                >
                   <CardContent className="p-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mb-6 group-hover:scale-110 transition-transform neural-pulse">
-                      <Icon className="h-8 w-8 text-primary" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mb-6 group-hover:scale-110 transition-transform neural-pulse relative overflow-hidden">
+                      <Icon className="h-8 w-8 text-primary relative z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">{industry.name}</h3>
-                    <p className="text-muted-foreground">{industry.description}</p>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                      {industry.name}
+                    </h3>
+                    <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors">
+                      {industry.description}
+                    </p>
                   </CardContent>
                 </Card>
               );
