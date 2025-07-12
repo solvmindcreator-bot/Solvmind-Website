@@ -2,6 +2,7 @@ import SolvmindLayout from '@/components/SolvmindLayout';
 import SolvmindHero from '@/components/SolvmindHero';
 import SolvmindServices from '@/components/SolvmindServices';
 import ConsultationBooking from '@/components/ConsultationBooking';
+import AIToolsShowcase from '@/components/AIToolsShowcase';
 import Process from '@/components/Process';
 import { Card, CardContent } from '@/components/ui/card';
 import { Building, Phone, Users } from 'lucide-react';
@@ -29,6 +30,7 @@ const SolvmindHome = () => {
     <SolvmindLayout>
       <SolvmindHero />
       <SolvmindServices />
+      <AIToolsShowcase />
       <Process />
       <ConsultationBooking />
       
