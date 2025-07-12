@@ -27,7 +27,7 @@ const SolvmindNavbar = () => {
                 alt="Solvmind AI" 
                 className="h-10 w-10"
               />
-              <span className="text-xl font-bold text-foreground ml-2">Solvmind AI</span>
+              <span className="text-xl font-bold text-black ml-2">Solvmind AI</span>
             </Link>
           </div>
 
