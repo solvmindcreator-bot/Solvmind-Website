@@ -108,9 +108,9 @@ const SolvmindAbout = () => {
             </p>
             
             <p className="text-lg leading-relaxed">
-              Today, we're proud to be helping banks, telecommunications companies, government agencies, and businesses 
-              harness the power of AI to improve their operations, better serve their customers, 
-              and drive growth in their markets.
+              Today, as a new AI agency, we're focused on building innovative solutions and establishing 
+              partnerships with forward-thinking businesses ready to embrace the transformative power of 
+              artificial intelligence to improve their operations and drive growth.
             </p>
           </div>
         </div>
