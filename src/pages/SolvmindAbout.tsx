@@ -161,8 +161,8 @@ const SolvmindAbout = () => {
               <p className="text-white/90">Deep understanding of Pacific business culture and challenges</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">Proven Results</div>
-              <p className="text-white/90">50+ successful AI implementations across the region</p>
+              <div className="text-3xl font-bold text-white mb-2">Ready to Innovate</div>
+              <p className="text-white/90">Prepared to deliver cutting-edge AI solutions for your business</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">Ongoing Support</div>
