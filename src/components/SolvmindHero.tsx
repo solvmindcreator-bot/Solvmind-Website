@@ -55,7 +55,7 @@ const SolvmindHero = () => {
           {/* Stats Section with better mobile layout */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto">
             <div className="text-center animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2 animate-bounce-subtle">Fast Implementation</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2 animate-bounce-subtle">Fast Deploy</div>
               <p className="text-sm sm:text-base text-muted-foreground">Quick deployment of AI solutions</p>
             </div>
             <div className="text-center animate-slide-in-up" style={{ animationDelay: '0.4s' }}>
