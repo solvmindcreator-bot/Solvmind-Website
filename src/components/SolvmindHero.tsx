@@ -102,7 +102,7 @@ const SolvmindHero = () => {
         <ScrollReveal animation="zoom-in" delay={1000}>
           <div className="mt-16 relative">
             <div className="relative mx-auto w-full max-w-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur-3xl animate-neural-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur-3xl animate-pulse-slow"></div>
               <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 group">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                   <ScrollReveal animation="bounce-in" delay={1100}>
