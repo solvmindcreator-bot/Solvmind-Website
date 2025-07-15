@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button, ButtonProps } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -67,19 +68,21 @@ export const AnimatedButton: React.FC<AnimatedButtonProps> = ({
     }
   };
 
-  // When asChild is true, we need to apply animations to the child element directly
+  const buttonClassName = cn(
+    'relative transition-all duration-300 ease-out transform-gpu',
+    animationClasses[animation][intensity],
+    isClicked && 'scale-95',
+    className
+  );
+
+  // When asChild is true, pass everything to Button and let it handle the Slot
   if (asChild) {
     return (
       <Button
         {...props}
         asChild
         onClick={handleClick}
-        className={cn(
-          'relative transition-all duration-300 ease-out transform-gpu',
-          animationClasses[animation][intensity],
-          isClicked && 'scale-95',
-          className
-        )}
+        className={buttonClassName}
       >
         {children}
       </Button>
@@ -91,12 +94,7 @@ export const AnimatedButton: React.FC<AnimatedButtonProps> = ({
     <Button
       {...props}
       onClick={handleClick}
-      className={cn(
-        'relative transition-all duration-300 ease-out transform-gpu',
-        animationClasses[animation][intensity],
-        isClicked && 'scale-95',
-        className
-      )}
+      className={buttonClassName}
     >
       {animation === 'ripple' && (
         <div className="absolute inset-0 overflow-hidden">
