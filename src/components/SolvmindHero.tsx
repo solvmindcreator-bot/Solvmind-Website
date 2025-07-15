@@ -21,19 +21,21 @@ const SolvmindHero = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <ScrollReveal animation="fade-up" className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent animate-gradient-shift">
-              Transform Your 
-              <MorphingText 
-                texts={["Business", "Workflow", "Operations", "Future"]} 
-                className="ml-2"
-                duration={2500}
-              />
-            </span>
-            <br />
-            <span className="text-foreground">with AI Solutions</span>
-          </h1>
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal animation="fade-up">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent animate-gradient-shift">
+                Transform Your 
+                <MorphingText 
+                  texts={["Business", "Workflow", "Operations", "Future"]} 
+                  className="ml-2"
+                  duration={2500}
+                />
+              </span>
+              <br />
+              <span className="text-foreground">with AI Solutions</span>
+            </h1>
+          </ScrollReveal>
           
           <ScrollReveal animation="fade-up" delay={200}>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -74,29 +76,27 @@ const SolvmindHero = () => {
           </ScrollReveal>
 
           {/* Enhanced Stats Section */}
-          <ScrollReveal animation="fade-up" delay={600}>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto">
-              <ScrollReveal animation="fade-left" delay={700}>
-                <div className="text-center group cursor-pointer">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2 animate-bounce-subtle group-hover:animate-wiggle transition-all duration-300">Fast Deploy</div>
-                  <p className="text-sm sm:text-base text-muted-foreground group-hover:text-foreground transition-colors duration-300">Quick deployment of AI solutions</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal animation="fade-up" delay={800}>
-                <div className="text-center group cursor-pointer">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2 animate-bounce-subtle group-hover:animate-wiggle transition-all duration-300 animation-delay-500">24/7 Support</div>
-                  <p className="text-sm sm:text-base text-muted-foreground group-hover:text-foreground transition-colors duration-300">Round-the-clock assistance</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal animation="fade-right" delay={900}>
-                <div className="text-center group cursor-pointer">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2 animate-bounce-subtle group-hover:animate-wiggle transition-all duration-300 animation-delay-800">Custom Solutions</div>
-                  <p className="text-sm sm:text-base text-muted-foreground group-hover:text-foreground transition-colors duration-300">Tailored to your business needs</p>
-                </div>
-              </ScrollReveal>
-            </div>
-          </ScrollReveal>
-        </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto">
+            <ScrollReveal animation="fade-left" delay={600}>
+              <div className="text-center group cursor-pointer">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2 animate-bounce-subtle group-hover:animate-wiggle transition-all duration-300">Fast Deploy</div>
+                <p className="text-sm sm:text-base text-muted-foreground group-hover:text-foreground transition-colors duration-300">Quick deployment of AI solutions</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-up" delay={700}>
+              <div className="text-center group cursor-pointer">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2 animate-bounce-subtle group-hover:animate-wiggle transition-all duration-300 animation-delay-500">24/7 Support</div>
+                <p className="text-sm sm:text-base text-muted-foreground group-hover:text-foreground transition-colors duration-300">Round-the-clock assistance</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-right" delay={800}>
+              <div className="text-center group cursor-pointer">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2 animate-bounce-subtle group-hover:animate-wiggle transition-all duration-300 animation-delay-800">Custom Solutions</div>
+                <p className="text-sm sm:text-base text-muted-foreground group-hover:text-foreground transition-colors duration-300">Tailored to your business needs</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
 
         {/* Enhanced Visual AI representation */}
         <ScrollReveal animation="zoom-in" delay={1000}>
