@@ -12,6 +12,7 @@ export const AnimatedButton: React.FC<AnimatedButtonProps> = ({
   className,
   animation = 'glow',
   intensity = 'medium',
+  asChild = false,
   ...props
 }) => {
   const [isClicked, setIsClicked] = React.useState(false);
@@ -66,6 +67,26 @@ export const AnimatedButton: React.FC<AnimatedButtonProps> = ({
     }
   };
 
+  // When asChild is true, we need to apply animations to the child element directly
+  if (asChild) {
+    return (
+      <Button
+        {...props}
+        asChild
+        onClick={handleClick}
+        className={cn(
+          'relative transition-all duration-300 ease-out transform-gpu',
+          animationClasses[animation][intensity],
+          isClicked && 'scale-95',
+          className
+        )}
+      >
+        {children}
+      </Button>
+    );
+  }
+
+  // Normal button behavior with animation wrappers
   return (
     <Button
       {...props}
