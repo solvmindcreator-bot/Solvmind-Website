@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const timeSlots = [
   '9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM', '4:00 PM'
@@ -14,6 +15,7 @@ const timeSlots = [
 const ConsultationBooking = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,7 +24,7 @@ const ConsultationBooking = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedDate || !selectedTime || !formData.name || !formData.email) {
       toast({
@@ -33,15 +35,46 @@ const ConsultationBooking = () => {
       return;
     }
 
-    toast({
-      title: "Consultation Booked!",
-      description: `We'll contact you to confirm your appointment on ${selectedDate} at ${selectedTime}.`,
-    });
+    setIsSubmitting(true);
 
-    // Reset form
-    setSelectedDate('');
-    setSelectedTime('');
-    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_solvmind', // You'll need to set this up in EmailJS
+        'template_consultation', // You'll need to create this template
+        {
+          to_email: 'sales@solvmind.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          preferred_date: selectedDate,
+          preferred_time: selectedTime,
+          message: formData.message,
+          subject: 'New AI Consultation Request'
+        },
+        'YOUR_PUBLIC_KEY' // You'll need to add your EmailJS public key
+      );
+
+      toast({
+        title: "Consultation Request Sent!",
+        description: `Your consultation request has been sent to our team. We'll contact you within 24 hours to confirm your appointment.`,
+      });
+
+      // Reset form
+      setSelectedDate('');
+      setSelectedTime('');
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error",
+        description: "There was an error sending your request. Please try again or contact us directly at sales@solvmind.com",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -175,9 +208,10 @@ const ConsultationBooking = () => {
               <Button 
                 type="submit" 
                 size="lg" 
-                className="w-full gradient-shift text-white hover:scale-105 transition-all ai-glow"
+                disabled={isSubmitting}
+                className="w-full gradient-shift text-white hover:scale-105 transition-all ai-glow disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Book Free Consultation
+                {isSubmitting ? 'Sending Request...' : 'Book Free Consultation'}
               </Button>
             </form>
           </CardContent>

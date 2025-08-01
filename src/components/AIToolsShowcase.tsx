@@ -3,6 +3,7 @@ import { Brain, MessageSquare, BarChart3, Image, FileText, Zap } from 'lucide-re
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
 
 const AIToolsShowcase = () => {
   const [activeDemo, setActiveDemo] = useState(0);
@@ -130,8 +131,10 @@ const AIToolsShowcase = () => {
           </div>
           
           <div className="text-center mt-8">
-            <Button size="lg" className="hover-scale">
-              Schedule Demo Call
+            <Button size="lg" className="hover-scale" asChild>
+              <Link to="/contact">
+                Schedule Demo Call
+              </Link>
             </Button>
           </div>
         </div>
