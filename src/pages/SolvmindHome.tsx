@@ -81,10 +81,10 @@ const SolvmindHome = () => {
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 neural-pulse">
-            Ready to Transform Your Business with AI?
+            Ready to Get SmartDesk for Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8 animate-fade-in">
-            Join leading businesses that are already benefiting from our AI solutions.
+            Join leading businesses already using SmartDesk AI to automate support, bookings, and follow-ups.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -97,7 +97,13 @@ const SolvmindHome = () => {
               href="mailto:sales@solvmind.com" 
               className="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-primary transition-all hover:scale-105"
             >
-              Contact Sales
+              sales@solvmind.com
+            </a>
+            <a 
+              href="tel:+67574527191" 
+              className="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-primary transition-all hover:scale-105"
+            >
+              +675 7452 7191
             </a>
           </div>
         </div>
