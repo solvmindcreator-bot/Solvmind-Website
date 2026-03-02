@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
-import emailjs from 'emailjs-com';
+import { supabase } from '@/integrations/supabase/client';
 
 const timeSlots = [
   '9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM', '4:00 PM'
@@ -38,38 +38,30 @@ const ConsultationBooking = () => {
     setIsSubmitting(true);
 
     try {
-      // Send email using EmailJS
-      await emailjs.send(
-        'service_solvmind', // You'll need to set this up in EmailJS
-        'template_consultation', // You'll need to create this template
-        {
-          to_email: 'sales@solvmind.com',
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          company: formData.company,
-          preferred_date: selectedDate,
-          preferred_time: selectedTime,
-          message: formData.message,
-          subject: 'New AI Consultation Request'
+      const { data, error } = await supabase.functions.invoke('send-form-email', {
+        body: {
+          ...formData,
+          formType: 'consultation',
+          preferredDate: selectedDate,
+          preferredTime: selectedTime,
         },
-        'YOUR_PUBLIC_KEY' // You'll need to add your EmailJS public key
-      );
+      });
+
+      if (error) throw error;
 
       toast({
         title: "Consultation Request Sent!",
-        description: `Your consultation request has been sent to our team. We'll contact you within 24 hours to confirm your appointment.`,
+        description: "We'll contact you within 24 hours to confirm your appointment.",
       });
 
-      // Reset form
       setSelectedDate('');
       setSelectedTime('');
       setFormData({ name: '', email: '', phone: '', company: '', message: '' });
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error('Error sending form:', error);
       toast({
         title: "Error",
-        description: "There was an error sending your request. Please try again or contact us directly at sales@solvmind.com",
+        description: "There was an error sending your request. Please try again or contact us directly at sales@solvmind.com or +675 7452 7191",
         variant: "destructive"
       });
     } finally {
@@ -85,7 +77,13 @@ const ConsultationBooking = () => {
             Book Your Free AI Consultation
           </h2>
           <p className="text-lg text-muted-foreground">
-            Discuss your business needs and discover how AI can transform your operations
+            Discuss your business needs and discover how SmartDesk can transform your operations
+          </p>
+          <p className="text-muted-foreground mt-2">
+            Or reach us directly at{' '}
+            <a href="mailto:sales@solvmind.com" className="text-primary hover:underline">sales@solvmind.com</a>
+            {' '}|{' '}
+            <a href="tel:+67574527191" className="text-primary hover:underline">+675 7452 7191</a>
           </p>
         </div>
 
@@ -101,7 +99,6 @@ const ConsultationBooking = () => {
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Date Selection */}
               <div className="space-y-2">
                 <Label htmlFor="date">Preferred Date *</Label>
                 <Input
@@ -114,7 +111,6 @@ const ConsultationBooking = () => {
                 />
               </div>
 
-              {/* Time Selection */}
               <div className="space-y-3">
                 <Label>Preferred Time *</Label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -133,7 +129,6 @@ const ConsultationBooking = () => {
                 </div>
               </div>
 
-              {/* Contact Information */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name *</Label>
@@ -143,7 +138,7 @@ const ConsultationBooking = () => {
                       id="name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="pl-10 transition-all hover:border-primary/50 focus:border-primary"
+                      className="pl-10"
                       placeholder="Your full name"
                     />
                   </div>
@@ -158,7 +153,7 @@ const ConsultationBooking = () => {
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="pl-10 transition-all hover:border-primary/50 focus:border-primary"
+                      className="pl-10"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -172,7 +167,7 @@ const ConsultationBooking = () => {
                       id="phone"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="pl-10 transition-all hover:border-primary/50 focus:border-primary"
+                      className="pl-10"
                       placeholder="+675 xxx xxxx"
                     />
                   </div>
@@ -184,13 +179,11 @@ const ConsultationBooking = () => {
                     id="company"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="transition-all hover:border-primary/50 focus:border-primary"
                     placeholder="Your company name"
                   />
                 </div>
               </div>
 
-              {/* Message */}
               <div className="space-y-2">
                 <Label htmlFor="message">Tell us about your AI needs</Label>
                 <div className="relative">
@@ -199,7 +192,7 @@ const ConsultationBooking = () => {
                     id="message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="pl-10 min-h-[100px] transition-all hover:border-primary/50 focus:border-primary"
+                    className="pl-10 min-h-[100px]"
                     placeholder="Describe your business challenges and how AI might help..."
                   />
                 </div>
