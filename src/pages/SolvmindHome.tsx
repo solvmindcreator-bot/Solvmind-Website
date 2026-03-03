@@ -6,6 +6,8 @@ import AIToolsShowcase from '@/components/AIToolsShowcase';
 import Process from '@/components/Process';
 import { Card, CardContent } from '@/components/ui/card';
 import { Building, Phone, Users } from 'lucide-react';
+import ctaBackground from '@/assets/cta-ai-background.jpg';
+import pngMapOutline from '@/assets/png-map-outline.png';
 
 const industries = [
   {
@@ -75,11 +77,18 @@ const SolvmindHome = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary relative overflow-hidden">
-        {/* AI Particles overlay */}
-        <div className="ai-particles"></div>
+      <section className="py-20 relative overflow-hidden">
+        {/* CTA Background Image */}
+        <div className="absolute inset-0">
+          <img src={ctaBackground} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-primary/70"></div>
+        </div>
+        {/* PNG Map watermark */}
+        <div className="absolute right-4 bottom-4 opacity-10 pointer-events-none">
+          <img src={pngMapOutline} alt="" className="w-48" />
+        </div>
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 neural-pulse">
             Ready to Get SmartDesk for Your Business?
           </h2>

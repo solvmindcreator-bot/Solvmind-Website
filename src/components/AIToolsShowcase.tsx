@@ -3,6 +3,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
+import smartDeskGraphic from '@/assets/smartdesk-ai-graphic.png';
+import pngMapOutline from '@/assets/png-map-outline.png';
 
 const smartDeskFeatures = [
   {
@@ -47,16 +49,31 @@ const channels = ['WhatsApp', 'Telegram', 'Facebook Messenger', 'Your Website', 
 
 const AIToolsShowcase = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-muted/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 animate-fade-in">
-          <Badge variant="secondary" className="mb-4 text-sm px-4 py-1">Our Flagship Product</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-            Meet SmartDesk – Your AI Assistant
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            It's more than a chatbot. It's a smart system that talks, works, and follows up like a real team member.
-          </p>
+    <section className="py-16 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
+      {/* PNG Map watermark on left */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/4 opacity-5 pointer-events-none">
+        <img src={pngMapOutline} alt="" className="w-96" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header with SmartDesk graphic */}
+        <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
+          <div className="flex-1 text-center lg:text-left animate-fade-in">
+            <Badge variant="secondary" className="mb-4 text-sm px-4 py-1">Our Flagship Product</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+              Meet SmartDesk – Your AI Assistant
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-xl">
+              It's more than a chatbot. It's a smart system that talks, works, and follows up like a real team member.
+            </p>
+          </div>
+          <div className="flex-shrink-0">
+            <img 
+              src={smartDeskGraphic} 
+              alt="SmartDesk AI Assistant visualization" 
+              className="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-2xl shadow-2xl border border-border/50"
+            />
+          </div>
         </div>
 
         {/* Features Grid */}
