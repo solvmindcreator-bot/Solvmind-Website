@@ -17,7 +17,7 @@ const SolvmindFooter = () => {
               <span className="text-xl font-bold">Solvmind AI</span>
             </div>
             <p className="text-background/80 mb-4 max-w-md">
-              AI solutions provider specializing in chatbots, automation, 
+              A proudly PNG-owned AI solutions provider specializing in chatbots, automation, 
               and custom AI tools for modern businesses.
             </p>
             <div className="space-y-2">
@@ -62,7 +62,8 @@ const SolvmindFooter = () => {
               <div className="text-background/80">AI Chatbots</div>
               <div className="text-background/80">Workflow Automation</div>
               <div className="text-background/80">AI Assistants</div>
-              <div className="text-background/80">AI Integration</div>
+              <div className="text-background/80">SmartDesk</div>
+              <div className="text-background/80">SecureDocs</div>
             </nav>
           </div>
         </div>
