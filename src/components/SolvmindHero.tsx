@@ -4,13 +4,17 @@ import ScrollReveal from '@/components/ScrollReveal';
 import AnimatedButton from '@/components/AnimatedButton';
 import FloatingElements from '@/components/FloatingElements';
 import MorphingText from '@/components/MorphingText';
+import heroAiBackground from '@/assets/hero-ai-background.jpg';
 import pngMapOutline from '@/assets/png-map-outline.png';
 
 const SolvmindHero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Hero background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/60 to-background"></div>
+      {/* Hero background image */}
+      <div className="absolute inset-0">
+        <img src={heroAiBackground} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background"></div>
+      </div>
 
       {/* PNG Map watermark */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-15 pointer-events-none">
@@ -50,9 +54,12 @@ const SolvmindHero = () => {
           </ScrollReveal>
           
           <ScrollReveal animation="fade-up" delay={200}>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-4 max-w-2xl mx-auto leading-relaxed">
               Harness the power of artificial intelligence to automate processes, 
               enhance decision-making, and accelerate growth
+            </p>
+            <p className="text-sm sm:text-base text-primary font-medium mb-8">
+              🇵🇬 Proudly PNG-Owned
             </p>
           </ScrollReveal>
 

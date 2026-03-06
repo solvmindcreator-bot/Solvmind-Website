@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import pngMapOutline from '@/assets/png-map-outline.png';
+import secureDocsProduct from '@/assets/securedocs-product.jpg';
 
 const secureDocsFeatures = [
   {
@@ -53,15 +54,23 @@ const SecureDocsShowcase = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12 animate-fade-in">
-          <Badge variant="secondary" className="mb-4 text-sm px-4 py-1">Our Product</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent">
-            SecureDocs – AI-Powered Document Management
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A smart electronic document management system that organizes, secures, and retrieves your business documents with the power of AI.
-          </p>
+        <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
+          <div className="flex-1 text-center lg:text-left animate-fade-in">
+            <Badge variant="secondary" className="mb-4 text-sm px-4 py-1">Our Product</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent">
+              SecureDocs – AI-Powered Document Management
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              A smart electronic document management system that organizes, secures, and retrieves your business documents with the power of AI.
+            </p>
+          </div>
+          <div className="flex-shrink-0">
+            <img 
+              src={secureDocsProduct} 
+              alt="SecureDocs AI Document Management" 
+              className="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-2xl shadow-2xl border border-border/50"
+            />
+          </div>
         </div>
 
         {/* Features Grid */}

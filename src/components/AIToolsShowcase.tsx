@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import pngMapOutline from '@/assets/png-map-outline.png';
+import smartDeskProduct from '@/assets/smartdesk-product.jpg';
 
 const smartDeskFeatures = [
   {
@@ -65,6 +66,13 @@ const AIToolsShowcase = () => {
             <p className="text-lg text-muted-foreground max-w-xl">
               It's more than a chatbot. It's a smart system that talks, works, and follows up like a real team member.
             </p>
+          </div>
+          <div className="flex-shrink-0">
+            <img 
+              src={smartDeskProduct} 
+              alt="SmartDesk AI Assistant" 
+              className="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-2xl shadow-2xl border border-border/50"
+            />
           </div>
         </div>
 
