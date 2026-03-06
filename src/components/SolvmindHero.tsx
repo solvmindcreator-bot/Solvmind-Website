@@ -4,21 +4,13 @@ import ScrollReveal from '@/components/ScrollReveal';
 import AnimatedButton from '@/components/AnimatedButton';
 import FloatingElements from '@/components/FloatingElements';
 import MorphingText from '@/components/MorphingText';
-import heroAiGraphic from '@/assets/hero-ai-graphic.jpg';
 import pngMapOutline from '@/assets/png-map-outline.png';
 
 const SolvmindHero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Hero background image */}
-      <div className="absolute inset-0">
-        <img 
-          src={heroAiGraphic} 
-          alt="Solvmind AI Neural Network Background" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background"></div>
-      </div>
+      {/* Hero background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/60 to-background"></div>
 
       {/* PNG Map watermark */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-15 pointer-events-none">

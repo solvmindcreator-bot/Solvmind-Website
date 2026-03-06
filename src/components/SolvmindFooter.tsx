@@ -17,7 +17,7 @@ const SolvmindFooter = () => {
               <span className="text-xl font-bold">Solvmind AI</span>
             </div>
             <p className="text-background/80 mb-4 max-w-md">
-              Leading AI solutions provider specializing in chatbots, automation, 
+              AI solutions provider specializing in chatbots, automation, 
               and custom AI tools for modern businesses.
             </p>
             <div className="space-y-2">
