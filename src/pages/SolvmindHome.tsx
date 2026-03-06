@@ -33,6 +33,7 @@ const SolvmindHome = () => {
       <SolvmindHero />
       <SolvmindServices />
       <AIToolsShowcase />
+      <SecureDocsShowcase />
       <Process />
       <ConsultationBooking />
       
