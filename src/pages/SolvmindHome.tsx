@@ -3,6 +3,7 @@ import SolvmindHero from '@/components/SolvmindHero';
 import SolvmindServices from '@/components/SolvmindServices';
 import ConsultationBooking from '@/components/ConsultationBooking';
 import AIToolsShowcase from '@/components/AIToolsShowcase';
+import SecureDocsShowcase from '@/components/SecureDocsShowcase';
 import Process from '@/components/Process';
 import { Card, CardContent } from '@/components/ui/card';
 import { Building, Phone, Users } from 'lucide-react';
