@@ -3,10 +3,10 @@ import SolvmindHero from '@/components/SolvmindHero';
 import SolvmindServices from '@/components/SolvmindServices';
 import ConsultationBooking from '@/components/ConsultationBooking';
 import AIToolsShowcase from '@/components/AIToolsShowcase';
+import SecureDocsShowcase from '@/components/SecureDocsShowcase';
 import Process from '@/components/Process';
 import { Card, CardContent } from '@/components/ui/card';
 import { Building, Phone, Users } from 'lucide-react';
-import ctaBackground from '@/assets/cta-ai-background.jpg';
 import pngMapOutline from '@/assets/png-map-outline.png';
 
 const industries = [
@@ -33,6 +33,7 @@ const SolvmindHome = () => {
       <SolvmindHero />
       <SolvmindServices />
       <AIToolsShowcase />
+      <SecureDocsShowcase />
       <Process />
       <ConsultationBooking />
       
@@ -78,11 +79,8 @@ const SolvmindHome = () => {
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        {/* CTA Background Image */}
-        <div className="absolute inset-0">
-          <img src={ctaBackground} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-primary/70"></div>
-        </div>
+        {/* CTA Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80"></div>
         {/* PNG Map watermark */}
         <div className="absolute right-4 bottom-4 opacity-10 pointer-events-none">
           <img src={pngMapOutline} alt="" className="w-48" />
@@ -93,7 +91,7 @@ const SolvmindHome = () => {
             Ready to Get SmartDesk for Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8 animate-fade-in">
-            Join leading businesses already using SmartDesk AI to automate support, bookings, and follow-ups.
+            Join businesses already using SmartDesk AI to automate support, bookings, and follow-ups.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

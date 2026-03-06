@@ -1,4 +1,4 @@
-import { MessageCircle, Zap, BrainCircuit, Puzzle } from 'lucide-react';
+import { MessageCircle, Zap, BrainCircuit } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import ScrollReveal from '@/components/ScrollReveal';
 import StaggeredGrid from '@/components/StaggeredGrid';
@@ -26,13 +26,6 @@ const services = [
     features: ['Document analysis', 'Decision support', 'Knowledge management', 'Predictive insights'],
     color: 'text-primary'
   },
-  {
-    title: 'AI Integration',
-    description: 'Seamlessly integrate AI capabilities into your existing systems and workflows without disruption.',
-    icon: Puzzle,
-    features: ['API development', 'System integration', 'Data migration', 'Staff training'],
-    color: 'text-secondary'
-  }
 ];
 
 const SolvmindServices = () => {
