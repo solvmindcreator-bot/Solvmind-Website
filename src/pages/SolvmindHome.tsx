@@ -45,6 +45,7 @@ const SolvmindHome = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Industries We Serve
             </h2>
+            <div className="section-divider mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Specialized AI solutions for key industries and modern business sectors.
             </p>
@@ -56,18 +57,16 @@ const SolvmindHome = () => {
               return (
                 <Card 
                   key={index} 
-                  className="text-center group hover:shadow-lg transition-all duration-500 hover:scale-105 hover:ai-glow hover-lift scroll-animate"
-                  style={{ animationDelay: `${index * 200}ms` }}
+                  className="text-center hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-border"
                 >
                   <CardContent className="p-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mb-6 group-hover:scale-110 transition-transform neural-pulse relative overflow-hidden">
-                      <Icon className="h-8 w-8 text-primary relative z-10" />
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 mb-6">
+                      <Icon className="h-7 w-7 text-primary" />
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-semibold text-foreground mb-3">
                       {industry.name}
                     </h3>
-                    <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors">
+                    <p className="text-muted-foreground">
                       {industry.description}
                     </p>
                   </CardContent>
@@ -83,7 +82,7 @@ const SolvmindHome = () => {
         {/* CTA Background */}
         <div className="absolute inset-0">
           <img src={ctaBackground} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-primary/60"></div>
+          <div className="absolute inset-0 bg-[hsl(215,80%,20%)]/85"></div>
         </div>
         {/* PNG Map watermark */}
         <div className="absolute right-4 bottom-4 opacity-10 pointer-events-none">
@@ -91,28 +90,28 @@ const SolvmindHome = () => {
         </div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 neural-pulse">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Get SmartDesk for Your Business?
           </h2>
-          <p className="text-xl text-white/90 mb-8 animate-fade-in">
+          <p className="text-xl text-white/80 mb-10">
             Join businesses already using SmartDesk AI to automate support, bookings, and follow-ups.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact" 
-              className="bg-white text-primary px-8 py-3 rounded-md font-medium hover:bg-white/90 transition-all hover:scale-105 ai-glow"
+              className="bg-white text-[hsl(215,80%,25%)] px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors shadow-lg"
             >
               Get Free Consultation
             </a>
             <a 
               href="mailto:sales@solvmind.com" 
-              className="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-primary transition-all hover:scale-105"
+              className="border-2 border-white/40 text-white px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors"
             >
               sales@solvmind.com
             </a>
             <a 
               href="tel:+67574527191" 
-              className="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-primary transition-all hover:scale-105"
+              className="border-2 border-white/40 text-white px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors"
             >
               +675 7452 7191
             </a>

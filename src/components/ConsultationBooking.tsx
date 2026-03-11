@@ -70,31 +70,32 @@ const ConsultationBooking = () => {
   };
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-muted/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 neural-pulse">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Book Your Free AI Consultation
           </h2>
+          <div className="section-divider mb-6"></div>
           <p className="text-lg text-muted-foreground">
-            Discuss your business needs and discover how SmartDesk can transform your operations
+            Discuss your business needs and discover how our solutions can transform your operations.
           </p>
           <p className="text-muted-foreground mt-2">
             Or reach us directly at{' '}
-            <a href="mailto:sales@solvmind.com" className="text-primary hover:underline">sales@solvmind.com</a>
+            <a href="mailto:sales@solvmind.com" className="text-primary hover:underline font-medium">sales@solvmind.com</a>
             {' '}|{' '}
-            <a href="tel:+67574527191" className="text-primary hover:underline">+675 7452 7191</a>
+            <a href="tel:+67574527191" className="text-primary hover:underline font-medium">+675 7452 7191</a>
           </p>
         </div>
 
-        <Card className="hover:ai-glow transition-all duration-300">
+        <Card className="shadow-sm border border-border">
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Calendar className="h-5 w-5 text-primary" />
               <span>Schedule Your Consultation</span>
             </CardTitle>
             <CardDescription>
-              Choose a convenient time for a 30-minute discussion about your AI requirements
+              Choose a convenient time for a 30-minute discussion about your AI requirements.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -107,7 +108,6 @@ const ConsultationBooking = () => {
                   value={selectedDate}
                   onChange={(e) => setSelectedDate(e.target.value)}
                   min={new Date().toISOString().split('T')[0]}
-                  className="transition-all hover:border-primary/50 focus:border-primary"
                 />
               </div>
 
@@ -120,7 +120,7 @@ const ConsultationBooking = () => {
                       type="button"
                       variant={selectedTime === time ? "default" : "outline"}
                       onClick={() => setSelectedTime(time)}
-                      className="transition-all hover:scale-105"
+                      className="transition-colors"
                     >
                       <Clock className="h-4 w-4 mr-2" />
                       {time}
@@ -202,7 +202,7 @@ const ConsultationBooking = () => {
                 type="submit" 
                 size="lg" 
                 disabled={isSubmitting}
-                className="w-full gradient-shift text-white hover:scale-105 transition-all ai-glow disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full"
               >
                 {isSubmitting ? 'Sending Request...' : 'Book Free Consultation'}
               </Button>
